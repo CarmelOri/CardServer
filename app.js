@@ -11,7 +11,7 @@ const config = require("config");
 const ENVIRONMENT = config.get("ENVIRONMENT");
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8081;
 
 app.use(corsMiddleware);
 app.use(express.json());

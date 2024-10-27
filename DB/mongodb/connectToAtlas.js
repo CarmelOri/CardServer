@@ -5,8 +5,9 @@ const connectionStringForAtlas = process.env.ATLAS_CONNECTION_STRING;
 
 const connectToAtlaslDb = async () => {
     try {
+        console.log(connectionStringForAtlas);
         await mongoose.connect(connectionStringForAtlas);
-        console.log("Connected to MongoDB");
+        console.log("Connected to MongoDB on atlas");
     } catch (error) {
         console.log("Could not connect to MongoDB Atlas");
 
