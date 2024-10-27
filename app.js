@@ -22,8 +22,14 @@ app.use(express.static("./public"));
 
 app.use(router);
 
+// Add default route to handle root URL
+app.get('/', (req, res) => {
+    res.send('Welcome to the API!');
+});
+
+// Error handling middleware
 app.use((err, req, res, next) => {
-    return handleError(res, 500, "internal error of the server")
+    return handleError(res, 500, "internal error of the server");
 });
 
 app.listen(PORT, () => {
