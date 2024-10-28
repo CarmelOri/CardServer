@@ -5,6 +5,8 @@ const config = require("config");
 const ENVIRONMENT = config.get("ENVIRONMENT");
 
 const connectToDb = async () => {
+    console.log(ENVIRONMENT);
+    
     if (ENVIRONMENT === "development") {
         await connectToLocalDb();
     }
